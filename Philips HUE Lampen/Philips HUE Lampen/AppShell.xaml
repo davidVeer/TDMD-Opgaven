@@ -13,8 +13,8 @@
         Route="Connection" />
 
     <ShellContent
-    Title="Mainpage"
-    ContentTemplate="{DataTemplate local:MainPage}"
-    Route="Mainpage" />
+    Title="Connected Lights"
+    ContentTemplate="{DataTemplate local:ConnectedLamps}"
+    Route="ConnectedLamps" />
 
 </Shell>

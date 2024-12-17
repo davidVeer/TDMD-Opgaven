@@ -1,9 +1,8 @@
 ﻿namespace Philips_HUE_Lampen
 {
-    public partial class MainPage : ContentPage
+    public partial class ConnectedLamps : ContentPage
     {
-
-        public MainPage()
+        public ConnectedLamps()
         {
             InitializeComponent();
         }
