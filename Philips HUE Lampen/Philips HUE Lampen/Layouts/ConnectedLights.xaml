@@ -4,7 +4,15 @@
              x:Class="Philips_HUE_Lampen.ConnectedLamps">
 
     <ScrollView>
-        <Label>Goodby cruel world (Just KNow that im alright)</Label>
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="30">
+                        
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ScrollView>
 
 </ContentPage>

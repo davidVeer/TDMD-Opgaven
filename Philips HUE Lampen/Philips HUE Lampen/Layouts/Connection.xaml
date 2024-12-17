@@ -19,10 +19,13 @@
                 <Button 
                     Text="Connect to Previous Bridge"
                     Margin="5"/>
-                
+
                 <Button 
                     Text="Connect to New Bridge"
-                    Margin="5"/>
+                    Margin="5"
+                    Clicked="Button_Clicked"
+                    />
+                
             </HorizontalStackLayout>
         </VerticalStackLayout>
 
