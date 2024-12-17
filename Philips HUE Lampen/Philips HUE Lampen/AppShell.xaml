@@ -8,8 +8,13 @@
     Title="Philips_HUE_Lampen">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Connection"
+        ContentTemplate="{DataTemplate local:Connection}"
+        Route="Connection" />
+
+    <ShellContent
+    Title="Mainpage"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="Mainpage" />
 
 </Shell>

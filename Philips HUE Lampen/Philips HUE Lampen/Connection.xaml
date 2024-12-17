@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Philips_HUE_Lampen.Connection">
+    
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center">
+            <Label HorizontalOptions="Center" >Username</Label>
+            <Entry
+                HorizontalOptions="Center"
+                x:Name="Username"
+                Placeholder="enter Username"/>
+
+            <Label HorizontalOptions="Center" >Ip-Adress</Label>
+            <Entry 
+                HorizontalOptions="Center"
+                x:Name="ipAdress"
+                Placeholder="Enter ip-adress"/>
+            
+            
+        
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
