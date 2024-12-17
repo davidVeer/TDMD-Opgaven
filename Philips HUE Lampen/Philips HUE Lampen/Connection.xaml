@@ -7,18 +7,26 @@
         <VerticalStackLayout VerticalOptions="Center">
             <Label HorizontalOptions="Center" >Username</Label>
             <Entry
-                HorizontalOptions="Center"
                 x:Name="Username"
                 Placeholder="enter Username"/>
 
             <Label HorizontalOptions="Center" >Ip-Adress</Label>
             <Entry 
-                HorizontalOptions="Center"
                 x:Name="ipAdress"
                 Placeholder="Enter ip-adress"/>
-            
-            
-        
+
+            <HorizontalStackLayout HorizontalOptions="Center" Padding="10">
+                <Button 
+                    Text="Connect to Previous Bridge"
+                    Margin="5"/>
+                
+                <Button 
+                    Text="Connect to New Bridge"
+                    Margin="5"/>
+            </HorizontalStackLayout>
         </VerticalStackLayout>
+
+        
+        
     </ScrollView>
 </ContentPage>
