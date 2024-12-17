@@ -31,8 +31,6 @@ namespace Philips_HUE_Lampen
             {
                 Console.WriteLine($"Fout bij het versturen van het commando: {e.Message}");
             }
-
-
         }
     }
 }
