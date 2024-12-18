@@ -10,9 +10,12 @@ namespace Philips_HUE_Lampen
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Task.Run(async ()=> SendHTTPRequest("localhost", "newdeveloper", "1" , "{\"on\": false}"));
+            APIConnection.ConnectToApi("", "");
+            APIConnection.setList();
+
+            //Task.Run(async ()=> SendHTTPRequest("localhost", "newdeveloper", "1" , "{\"on\": false}"));
         }
 
         public static async Task SendHTTPRequest(string bridgeIp, string username, string lampId, string jsonPayload)

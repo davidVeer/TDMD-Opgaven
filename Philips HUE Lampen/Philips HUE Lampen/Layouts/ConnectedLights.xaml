@@ -4,11 +4,13 @@
              x:Class="Philips_HUE_Lampen.ConnectedLamps">
 
     <ScrollView>
-        <ListView>
+        <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell Height="30">
-                        
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding id}" />
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
