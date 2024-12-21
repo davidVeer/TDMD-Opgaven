@@ -29,7 +29,7 @@ namespace Philips_HUE_Lampen
 
         private void previousBridgeConnectButton_Clicked(object sender, EventArgs e)
         {
-            // TODO
+            API_Requests.SendHTTPRequestPut("1" , "{\"on\": true}");
         }
     }
 }

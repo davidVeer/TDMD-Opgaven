@@ -10,7 +10,8 @@
                     <ViewCell>
                         <StackLayout>
                             <HorizontalStackLayout>
-                                <VerticalStackLayout Padding="10">
+                                
+                                <VerticalStackLayout  Padding="10">
                                     <Label Text="name :" />
                                     <Label Text="{Binding name}" />
                                 </VerticalStackLayout>
@@ -34,6 +35,7 @@
                                     <Label Text="Status :" />
                                     <Label Text="{Binding state.on}" />
                                 </VerticalStackLayout>
+                                
                             </HorizontalStackLayout>
                         </StackLayout>
                     </ViewCell>
