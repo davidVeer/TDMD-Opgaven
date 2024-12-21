@@ -7,26 +7,37 @@
         <VerticalStackLayout VerticalOptions="Center">
             <Label HorizontalOptions="Center" >Username</Label>
             <Entry
-                x:Name="Username"
+                x:Name="usernameEntry"
                 Placeholder="enter Username"/>
 
             <Label HorizontalOptions="Center" >Ip-Adress</Label>
             <Entry 
-                x:Name="ipAdress"
+                x:Name="ipAdressEntry"
                 Placeholder="Enter ip-adress"/>
 
             <HorizontalStackLayout HorizontalOptions="Center" Padding="10">
                 <Button 
+                    x:Name="previousBridgeConnectButton"
                     Text="Connect to Previous Bridge"
-                    Margin="5"/>
+                    Margin="5"
+                    Clicked="previousBridgeConnectButton_Clicked"
+                    />
 
                 <Button 
+                    x:Name="customBridgeConnectButton"
                     Text="Connect to New Bridge"
                     Margin="5"
-                    Clicked="Button_Clicked"
+                    Clicked="customBridgeConnectButton_Clicked"
                     />
-                
             </HorizontalStackLayout>
+
+            <Button
+                x:Name="developerConnectButton"
+                Text="Connect to Emulated Bridge"
+                Margin="15"
+                Clicked="developerConnectButton_Clicked"
+                />
+
         </VerticalStackLayout>
 
         

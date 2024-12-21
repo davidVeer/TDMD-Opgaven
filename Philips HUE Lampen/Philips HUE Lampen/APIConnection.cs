@@ -1,38 +1,46 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace Philips_HUE_Lampen
 {
     public static class APIConnection
     {
-        public static string ApiIp { get; set; }
-        public static string Username { get; set; }
-        public static List<Lamp> list { get; set; }
+        public static string ConnectedApi_IpAdress { get; private set; }
+        public static string ConnectedApi_Username { get; private set; }
+        public static List<Lightsobject> LampList { get; set; }
 
-        public static void ConnectToApi(string apiIp, string username)
+        public static void ConnectToApi(string NewApi_IpAdress, string NewApi_Username)
         {
-            ApiIp = apiIp;
-            Username = username;
-
+            ConnectedApi_IpAdress = NewApi_IpAdress;
+            ConnectedApi_Username = NewApi_Username;
         }
 
-        public static List<Lamp> getLamps()
+        public static void InitializeList()
         {
-            return list;
-        }
+            LampList = new List<Lightsobject>();
+            int currentNumber = 1;
+            while (true)
+            {
+                String SelectedLight = $"lights/{currentNumber}";
 
-        public static void setList()
-        {
-            list = new List<Lamp>();
-            list.Add(new Lamp { id = "1", Brightness = "100", Hue = "100", Saturation = "100", Status = true});
-            list.Add(new Lamp { id = "2", Brightness = "100", Hue = "100", Saturation = "100", Status = true});
-            list.Add(new Lamp { id = "3", Brightness = "100", Hue = "100", Saturation = "100", Status = true});
-            list.Add(new Lamp { id = "4", Brightness = "100", Hue = "100", Saturation = "100", Status = true});
-            list.Add(new Lamp { id = "5", Brightness = "100", Hue = "100", Saturation = "100", Status = true});
+                try
+                {
+                    String response = Task.Run(async () => await API_Requests.SendHTTPRequestGet(SelectedLight)).Result;
+                    Lightsobject newLight = JsonSerializer.Deserialize<Lightsobject>(response);
+                    LampList.Add(newLight);
+                }
+                catch {
+                    break;
+                }
+
+                currentNumber++;
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Philips_HUE_Lampen
         public string Brightness { get; set;}
         public string Hue { get; set;}
         public string Saturation { get; set;}
-        public bool Status { get; set;}
+        public bool Status { get; set;} 
 
             
 

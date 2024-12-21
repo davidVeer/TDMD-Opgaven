@@ -2,14 +2,39 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Philips_HUE_Lampen.ConnectedLamps">
-
+             
     <ScrollView>
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <Label Text="{Binding id}" />
+                            <HorizontalStackLayout>
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="name :" />
+                                    <Label Text="{Binding name}" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="brightness :" />
+                                    <Label Text="{Binding state.bri}" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="Saturation :" />
+                                    <Label Text="{Binding state.sat}" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="Hue :" />
+                                    <Label Text="{Binding state.hue}" />
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Padding="10">
+                                    <Label Text="Status :" />
+                                    <Label Text="{Binding state.on}" />
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

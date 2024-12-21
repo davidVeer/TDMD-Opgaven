@@ -5,35 +5,31 @@ namespace Philips_HUE_Lampen
 {
     public partial class Connection : ContentPage
     {
+        private String developerUsername;
+
         public Connection()
         {
             InitializeComponent();
+            developerUsername = "newdeveloper";
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
-        {
-            APIConnection.ConnectToApi("", "");
-            APIConnection.setList();
+        
 
-            //Task.Run(async ()=> SendHTTPRequest("localhost", "newdeveloper", "1" , "{\"on\": false}"));
+        private void developerConnectButton_Clicked(object sender, EventArgs e)
+        {
+            APIConnection.ConnectToApi(ipAdressEntry.Text, developerUsername);
+            APIConnection.InitializeList();
         }
 
-        public static async Task SendHTTPRequest(string bridgeIp, string username, string lampId, string jsonPayload)
+        private void customBridgeConnectButton_Clicked(object sender, EventArgs e)
         {
-            HttpClient client = new HttpClient();
-            try
-            {
-                string url = $"http://{bridgeIp}/api/{username}/lights/{lampId}/state";
-                var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
-                var response = await client.PutAsync(url, content);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"Response: {responseBody}");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Fout bij het versturen van het commando: {e.Message}");
-            }
+            APIConnection.ConnectToApi(ipAdressEntry.Text, usernameEntry.Text);
+            APIConnection.InitializeList();
+        }
+
+        private void previousBridgeConnectButton_Clicked(object sender, EventArgs e)
+        {
+            // TODO
         }
     }
 }
