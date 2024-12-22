@@ -18,13 +18,11 @@ namespace Philips_HUE_Lampen
         private void developerConnectButton_Clicked(object sender, EventArgs e)
         {
             APIConnection.ConnectToApi(ipAdressEntry.Text, developerUsername);
-            APIConnection.InitializeList();
         }
 
         private void customBridgeConnectButton_Clicked(object sender, EventArgs e)
         {
             APIConnection.ConnectToApi(ipAdressEntry.Text, usernameEntry.Text);
-            APIConnection.InitializeList();
         }
 
         private void previousBridgeConnectButton_Clicked(object sender, EventArgs e)

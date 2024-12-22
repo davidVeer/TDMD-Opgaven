@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Philips_HUE_Lampen.ConnectedLamps">
              
-    <ScrollView>
+    <RefreshView IsRefreshing="{Binding IsRefresh}"
+                 Command="{Binding RefreshCommand}">
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -15,12 +16,12 @@
                                 </HorizontalStackLayout.GestureRecognizers>
 
                                 <VerticalStackLayout  Padding="10">
-                                    <Label Text="name :" />
+                                    <Label Text="Name :" />
                                     <Label Text="{Binding name}" />
                                 </VerticalStackLayout>
 
                                 <VerticalStackLayout Padding="10">
-                                    <Label Text="brightness :" />
+                                    <Label Text="Brightness :" />
                                     <Label Text="{Binding state.bri}" />
                                 </VerticalStackLayout>
 
@@ -45,6 +46,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </ScrollView>
+    </RefreshView>
 
 </ContentPage>
