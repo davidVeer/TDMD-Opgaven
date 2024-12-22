@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Text.Json;
-using Newtonsoft.Json;
-
-namespace Philips_HUE_Lampen
-{
-    public class Lightsobject
-    {
+﻿namespace Philips_HUE_Lampen {
+    public class HueLight {
         public string modelid { get; set; }
         public string name { get; set; }
         public string swversion { get; set; }
@@ -20,8 +9,7 @@ namespace Philips_HUE_Lampen
         public string uniqueid { get; set; }
     }
 
-    public class State
-    {
+    public class State {
         public double[] xy { get; set; }
         public int ct { get; set; }
         public string alert { get; set; }
@@ -34,8 +22,7 @@ namespace Philips_HUE_Lampen
         public bool on { get; set; }
     }
 
-    public class Pointsymbol
-    {
+    public class Pointsymbol {
         public string _1 { get; set; }
         public string _2 { get; set; }
         public string _3 { get; set; }

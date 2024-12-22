@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SHp6v+ByZ34=",
+  "dgSpecHash": "td/8uEjlir8=",
   "success": true,
-  "projectFilePath": "C:\\Programming and development\\personalProjects\\TDMD-Opgaven\\Philips HUE Lampen\\Philips HUE Lampen\\Philips HUE Lampen.csproj",
+  "projectFilePath": "C:\\school\\Leerjaar 2 (TI 24-25)\\periode 2\\opdrachten & oefentoetsen\\TDMD\\TDMD-Opgaven\\Philips HUE Lampen\\Philips HUE Lampen\\Philips HUE Lampen.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\googlegson\\2.11.0.3\\googlegson.2.11.0.3.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.0\\microsoft.extensions.configuration.9.0.0.nupkg.sha512",

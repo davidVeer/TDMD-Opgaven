@@ -9,8 +9,11 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
-                            <HorizontalStackLayout>
-                                
+                            <HorizontalStackLayout x:Name="individualLightItem" >
+                                <HorizontalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </HorizontalStackLayout.GestureRecognizers>
+
                                 <VerticalStackLayout  Padding="10">
                                     <Label Text="name :" />
                                     <Label Text="{Binding name}" />
@@ -35,7 +38,7 @@
                                     <Label Text="Status :" />
                                     <Label Text="{Binding state.on}" />
                                 </VerticalStackLayout>
-                                
+
                             </HorizontalStackLayout>
                         </StackLayout>
                     </ViewCell>
